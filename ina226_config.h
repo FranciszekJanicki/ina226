@@ -98,10 +98,10 @@ typedef struct {
 
 typedef struct {
   void *bus_user;
-  ina226_err_t (*bus_init)(void *);
-  ina226_err_t (*bus_deinit)(void *);
-  ina226_err_t (*bus_write)(void *, uint8_t, uint8_t const *, size_t);
-  ina226_err_t (*bus_read)(void *, uint8_t, uint8_t *, size_t);
+  ina226_err_t (*bus_initialize)(void *);
+  ina226_err_t (*bus_deinitialize)(void *);
+  ina226_err_t (*bus_write_data)(void *, uint8_t, uint8_t const *, size_t);
+  ina226_err_t (*bus_read_data)(void *, uint8_t, uint8_t *, size_t);
 } ina226_interface_t;
 
 inline float32_t ina226_current_range_to_scale(float32_t current_range) {
