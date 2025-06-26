@@ -4,10 +4,8 @@ target_sources(ina226 PRIVATE
     "ina226.c"
 )
 
-target_include_directories(ina226 PUBLIC 
-)
-
-target_link_libraries(ina226 PUBLIC
+target_include_directories(ina226 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(ina226 PUBLIC
