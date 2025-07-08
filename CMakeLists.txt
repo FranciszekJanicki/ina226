@@ -1,7 +1,7 @@
 add_library(ina226 STATIC)
 
 target_sources(ina226 PRIVATE 
-    "ina226.c"
+    ina226.c
 )
 
 target_include_directories(ina226 PUBLIC
